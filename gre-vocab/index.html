@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GRE 词汇表</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-view="list">
+
+<header class="topbar">
+  <span class="brand">GRE 词汇表</span>
+  <span class="hint" id="hint"></span>
+  <span class="spacer"></span>
+  <span class="count" id="count"></span>
+</header>
+
+<main>
+  <section id="view-list" class="view">
+    <div id="list-body" class="list-body">
+      <div id="vs-sizer" class="vs-sizer"></div>
+      <div id="vs-content" class="vs-content"></div>
+    </div>
+  </section>
+
+  <section id="view-examples" class="view card-view hidden">
+    <article class="card" id="ex-card"></article>
+  </section>
+
+  <section id="view-etym" class="view card-view hidden">
+    <article class="card" id="et-card"></article>
+  </section>
+
+  <section id="view-test" class="view test-view hidden">
+    <div class="test-header">
+      <h2 id="test-title">测试</h2>
+      <div class="test-actions">
+        <button id="test-restart" class="test-action-btn" type="button" title="重新随机排列">↻ 重来</button>
+        <button id="test-exit" class="test-action-btn test-exit" type="button" title="退出测试">✕</button>
+      </div>
+    </div>
+    <div class="test-cols">
+      <div class="test-col" id="test-left" aria-label="例句"></div>
+      <div class="test-col" id="test-right" aria-label="候选单词"></div>
+    </div>
+    <div class="test-footer" id="test-status"></div>
+  </section>
+</main>
+
+<nav class="azbar" id="azbar" aria-label="字母索引"></nav>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
